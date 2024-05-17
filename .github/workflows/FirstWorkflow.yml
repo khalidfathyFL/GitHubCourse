@@ -1,0 +1,16 @@
+name: First workflow
+# workflow_dispatch : event to manually can start this workflow 
+# there are alot of events that we will see it later on the course
+on: workflow_dispatch 
+# workflow have many jobs you need to press tab after job yto define the name of the job and should have colon after name then press tab
+jobs:
+  first-job:
+    # here we write onw hich operating system i will runs on
+    runs-on: windows-latest
+    # here we write the steps as every job has one or more steps
+    # pust dash for new step 
+    steps:
+      - name: Print greeting
+        run: echo "hello world!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
